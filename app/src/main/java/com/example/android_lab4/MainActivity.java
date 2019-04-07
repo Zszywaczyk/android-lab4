@@ -1,6 +1,7 @@
 package com.example.android_lab4;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -43,5 +44,15 @@ public class MainActivity extends AppCompatActivity {
     public void nowyWpis(MenuItem mi){
         Intent intent = new Intent(this, DodajWpis.class);
         startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==1 && resultCode==RESULT_OK){
+            Bundle extras = data.getExtras();
+            String nowy = (String) extras.get("wpis");
+            target.add(nowy);
+            adapter.notifyDataSetChanged();
+        }
     }
 }
