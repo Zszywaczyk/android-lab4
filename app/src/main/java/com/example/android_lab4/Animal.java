@@ -26,7 +26,7 @@ public class Animal implements Serializable {
     //@RecentlyNonNull
     @Override
     public String toString() {
-        return "Zwierze: [id-"+_id+", gatunek-"+gatunek+", kolor-"+kolor+", wielkość-"+wielkosc+" ]";
+        return "Zwierze: [id-"+_id+", gatunek-"+gatunek+", kolor-"+kolor+", wielkosc-"+wielkosc+" ]";
     }
 
     public int getId() {
