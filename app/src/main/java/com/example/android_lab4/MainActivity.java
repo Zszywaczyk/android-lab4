@@ -2,7 +2,7 @@ package com.example.android_lab4;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+//TODO: cos tam cos
 public class MainActivity extends AppCompatActivity {
 
     @Override
